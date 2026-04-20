@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SHIELD-112 Login</title>
+
+<style>
+body{
+font-family:Arial;
+margin:0;
+background-image:url("1.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+transition: background-image 1s ease-in-out;
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+.login-box{
+background:white;
+padding:30px;
+border-radius:10px;
+width:300px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>🛡 SHIELD-112</h2>
+
+<form onsubmit="login(); return false;">
+
+<input type="text" id="username" placeholder="Username"
+onkeydown="if(event.key==='ArrowDown'){document.getElementById('password').focus();}">
+
+<input type="password" id="password" placeholder="Password"
+onkeydown="if(event.key==='ArrowUp'){document.getElementById('username').focus();}">
+
+<button type="submit">Login</button>
+
+</form>
+
+<p id="message"></p>
+
+<p>New user?</p>
+<a href="register.html">Create Account</a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
